@@ -1,9 +1,5 @@
 const { Controller } = require('egg');
 
-
-
-
-module.exports = DianpingController;
 class DianpingController extends Controller {
   async getAlbum () {
     const { ctx } = this;
@@ -14,3 +10,5 @@ class DianpingController extends Controller {
     ctx.body = await ctx.service.dianping.getAlbumInfo(apiData);
   };
 }
+
+module.exports = DianpingController;
